@@ -54,7 +54,7 @@
           <br />
 
           <div class="calculadora">
-            <input type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
+            <input type="text" id="resultado" class="form-control resultado" placeholder="0" disabled="disabled" />
             
             <div class="row">
               <button type="button" onclick="calcula('acao','c')" class="btn btn-dark btn-lg clear font-weight-light">C</button>
@@ -96,9 +96,33 @@
 
 </html>
 <script type="text/javascript">
-  function calcula(tipo,valor){
-    console.log(tipo,valor);
 
+  //funcao calcula chamada pelo evento onclick
+  function calcula(tipo,valor){
+    //console.log(tipo,valor);
+    // se o tipo for acao
+    if(tipo=== 'acao'){
+      //deixa o id resultado 0
+      if(valor=== 'c'){
+        document.getElementById('resultado').value="";
+      }
+
+      //compara os valores e concatena os valores digitados  de acao
+      if(valor==='+' || valor==='-' || valor==='*' || valor==='/' || valor==='.'){
+        document.getElementById("resultado").value+= valor;  
+      }
+
+      if(valor=== '='){
+        //a funcao nativa EVAL pega os valores digitado e converte de string para inteiros e calcula
+        var valor_campo= eval(document.getElementById("resultado").value);
+        document.getElementById("resultado").value= valor_campo;
+
+      }      
+
+      //aqui preenche com os valores 'nemros' digitados .. concatenando atraves do +=
+    }else if(tipo=== 'valor'){
+      document.getElementById("resultado").value+= valor;
+    }
 
   }
 
