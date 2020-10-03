@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+   
+   <script>
+   		function acao(){
+   	document.getElementById('teste').style.backgroundColor="#F4FA58";
+   			//alert("aqui");
+   		}
+	function vai(){
+   	//document.getElementById('teste').style.backgroundColor="";
+   			//alert("aqui");
+
+   		var caracter= document.getElementById('teste').value;
+   		//caracter.trim(); 	
+   		
+   		if(caracter.length <3){
+   			document.getElementById('teste').style.backgroundColor="red";
+   		}else{
+   			document.getElementById('teste').style.backgroundColor="green";
+   		}
+   		}
+   	
+
+
+   	 </script>
+    
+<style type="text/css">
+	
+
+</style>
+
+
+  </head>
+
+  <body>
+
+<input type="text" id='teste' class='estilo01' onfocus="acao()" onblur="vai()">
+
+
+  </body>
+</html>

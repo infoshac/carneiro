@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+<script type="text/javascript">
+var objetos= Array('Cadeira','Impressora','Garfo');
+
+
+function btAdicionar(){
+	var digitado = document.getElementById('digito').value;
+	if(digitado== ''){
+
+		alert('Preencha o campo');	
+	}
+	if(objetos.indexOf(digitado)!= -1){
+		alert('Valor existente');	
+	}else{
+		objetos.push(digitado);
+	}
+}
+function btAlterar(){
+	objetos.sort();
+console.log(objetos);
+}
+
+
+</script>
+</head>
+<body>
+<input type="text" id="digito">
+
+
+<input type="button" onclick="btAdicionar()" name="Adicionar" value="Adicionar">
+<input type="button" name="Renomear" onclick="btAlterar()" value="Renomear">
+
+</body>
+</html>

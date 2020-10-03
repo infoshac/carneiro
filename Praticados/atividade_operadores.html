@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScrip</title>
+    <script>
+var num1= prompt('Digite o primeiro valor');
+var Operador= prompt('Digite a somar ou subtrair');
+var num2= prompt('Digite o segundo valor');
+
+var num1= parseFloat(num1);
+var num2= parseFloat(num2);
+
+
+function calcula (num1, num2, Operador){
+	
+	if(Operador== 'soma'){
+		var calculo= num1 + num2;
+	}
+	if(Operador== 'subtrair'){
+		var calculo= num1 - num2;
+	}
+	return calculo;
+}
+document.write('O valor é : '+ calcula(num1, num2, Operador));
+
+//swith (Operador)
+//case 'soma'
+
+
+   </script>
+</head>
+
+</body>
+</html>

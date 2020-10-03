@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atividade</title>
+    <script>
+    // recebe valores
+    var nome= prompt('Digite seu nome');
+    var altura= prompt('Digite em centimetro sua altura');	
+    var peso= prompt('Digite seu peso');
+
+    //converte valores
+    var altura= parseFloat(altura);
+    var peso= parseFloat(peso);
+
+    //altura para centimetro
+    var alturaM= (altura/100);
+    //var alturaM= parseFloat(alturaM);
+    //calculo do IMC
+    var IMC= peso/ (alturaM * alturaM);
+
+    var IMC= parseFloat(IMC);
+    if(IMC < 16){
+  		var classificacao= 'Baixo peso muito grave';
+    }
+
+    else if(IMC > 16 && IMC  <= 16.99){
+    	var classificacao=  'Baixo peso grave';
+    }
+
+    else if(IMC >= 17 && IMC  <= 18.49){
+    	var classificacao=  'Baixo peso ';
+    }
+
+    else if(IMC >= 18.50 && IMC  <= 24.99){
+    	var classificacao=  'Peso normal';
+    }
+
+    else if(IMC >= 25 && IMC  <= 29.99){
+    	var classificacao=  'Sobrepeso';
+    }
+
+    else if(IMC >= 30 && IMC  <= 34.99){
+    	var classificacao=  'Obesidade grau I';
+    }
+
+    else if(IMC >= 35 && IMC  <= 39.99){
+    	var classificacao=  'Obesidade grau II';
+    }
+
+    else if(IMC > 40){
+    	var classificacao=  'BObesidade grau III';
+    }
+
+
+
+
+    document.write('Altura em centimetros: '+ altura+ '</br>');
+	document.write('Altura em metros: '+ alturaM+ '</br>');
+	document.write(nome + 'possui índice de massa corporal igual a '+ IMC+ ', sendo classificado como: '+classificacao);
+ 	</script>
+  </head>
+
+  <body>
+  </body>
+</html>
+
+
+
+
